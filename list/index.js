@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 
 
-const List = require('./lib/list');
+// const List = require('./lib/list');
 
 
 app.get('/', requestHandler);
