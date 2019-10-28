@@ -1,4 +1,6 @@
-const List = require('../../lib/list.js');
+// const List = require('../lib/list.js');
+const List = require('../lib/list');
+
 
 xdescribe('List', () => {
 
@@ -73,6 +75,7 @@ xdescribe('List', () => {
     let iterations = 0;
     myList.forEach( item => {
       iterations++;
+      item;
     });
     expect(iterations).toEqual(0);
   });
@@ -82,6 +85,7 @@ xdescribe('List', () => {
     let iterations = 0;
     myList.forEach( item => {
       iterations++;
+      item;
     });
     expect(iterations).toEqual(myList.length);
   });
@@ -129,6 +133,7 @@ xdescribe('List', () => {
     let myList = loadList();
     let newList = myList.reduce( (state,val,idx) => {
       state.push(val);
+      idx;
       return state;
     },[]);
     expect(newList.length).toEqual(myList.length);
